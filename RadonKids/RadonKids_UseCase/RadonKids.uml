@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_4mFZgEorEeitMaYzHKsj-w" name="RadonKids">
+  <ownedComment xmi:type="uml:Comment" xmi:id="_bMvqgEo3EeitMaYzHKsj-w">
+    <body>The &quot;RadonKids Project&quot; &#xD;
+Goals:&#xD;
+- support public authorities's Radon awareness-raising campaigns &#xD;
+- empower teachers and scholars to get in touch with the Radon matter in a didactical way.&#xD;
+- facilitate teaching of physics, IoT and Internet. &#xD;
+</body>
+  </ownedComment>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_49TmsEorEeitMaYzHKsj-w">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_FihawEosEeitMaYzHKsj-w" name="User"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_GoBDMEosEeitMaYzHKsj-w" name="Teacher">
+    <generalization xmi:type="uml:Generalization" xmi:id="_TKBLMEosEeitMaYzHKsj-w" general="_FihawEosEeitMaYzHKsj-w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_LKdToEosEeitMaYzHKsj-w" name="Scholar">
+    <generalization xmi:type="uml:Generalization" xmi:id="_SfSMIEosEeitMaYzHKsj-w" general="_FihawEosEeitMaYzHKsj-w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_hyl-IEosEeitMaYzHKsj-w" name="RadonKids Project">
+    <packagedElement xmi:type="uml:Component" xmi:id="_mxBnAEosEeitMaYzHKsj-w" name="Ionic Chamber" useCase="_uW0hcEoxEeitMaYzHKsj-w">
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_uW0hcEoxEeitMaYzHKsj-w" name="Sense Radon Concentration" subject="_mxBnAEosEeitMaYzHKsj-w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_xmZ1IEosEeitMaYzHKsj-w" name="RaspberryPi" useCase="_b_mdEEoyEeitMaYzHKsj-w">
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_b_mdEEoyEeitMaYzHKsj-w" name="Public collected Radon Data" subject="_xmZ1IEosEeitMaYzHKsj-w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_5QM4EEosEeitMaYzHKsj-w" name="uC with ADC" useCase="_zBdroEoxEeitMaYzHKsj-w _2CGyIEoxEeitMaYzHKsj-w">
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_zBdroEoxEeitMaYzHKsj-w" name="Measure Radon Consentration" subject="_5QM4EEosEeitMaYzHKsj-w">
+        <include xmi:type="uml:Include" xmi:id="_R_r3UEoyEeitMaYzHKsj-w" addition="_2CGyIEoxEeitMaYzHKsj-w"/>
+      </ownedUseCase>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_2CGyIEoxEeitMaYzHKsj-w" name="Acquire Radon Data" subject="_5QM4EEosEeitMaYzHKsj-w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_k9Z7AEoxEeitMaYzHKsj-w" name="RadonKids-Cloud" useCase="_nxIKYEoyEeitMaYzHKsj-w _mEX4MEozEeitMaYzHKsj-w _1P_GwEozEeitMaYzHKsj-w _79jyAEozEeitMaYzHKsj-w _txGocEo1EeitMaYzHKsj-w _3x_pIEo2EeitMaYzHKsj-w">
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_nxIKYEoyEeitMaYzHKsj-w" name="Manage Accounts" subject="_k9Z7AEoxEeitMaYzHKsj-w"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_mEX4MEozEeitMaYzHKsj-w" name="Make statistical data analysis" subject="_k9Z7AEoxEeitMaYzHKsj-w"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_1P_GwEozEeitMaYzHKsj-w" name="Collect published data" subject="_k9Z7AEoxEeitMaYzHKsj-w"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_79jyAEozEeitMaYzHKsj-w" name="Web Dashboard Display Data and Apply Filters" subject="_k9Z7AEoxEeitMaYzHKsj-w"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_txGocEo1EeitMaYzHKsj-w" name="Publish awarenes-raising campaing on the Web Site" subject="_k9Z7AEoxEeitMaYzHKsj-w"/>
+      <ownedUseCase xmi:type="uml:UseCase" xmi:id="_3x_pIEo2EeitMaYzHKsj-w" name="Offer cheap Radon Sensors to citizens" subject="_k9Z7AEoxEeitMaYzHKsj-w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Wu3jQEoyEeitMaYzHKsj-w" client="_zBdroEoxEeitMaYzHKsj-w" supplier="_uW0hcEoxEeitMaYzHKsj-w"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_foJ4IEoyEeitMaYzHKsj-w" client="_b_mdEEoyEeitMaYzHKsj-w" supplier="_zBdroEoxEeitMaYzHKsj-w"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_OV0YMEozEeitMaYzHKsj-w" name="Provide a self explanatory tutorial about how to build the system"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_HC8LAEo0EeitMaYzHKsj-w" name="&lt;&lt;depends on >>" client="_1P_GwEozEeitMaYzHKsj-w" supplier="_b_mdEEoyEeitMaYzHKsj-w"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_s172IEo0EeitMaYzHKsj-w" client="_mEX4MEozEeitMaYzHKsj-w" supplier="_1P_GwEozEeitMaYzHKsj-w"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_t8LsgEo0EeitMaYzHKsj-w" client="_79jyAEozEeitMaYzHKsj-w" supplier="_mEX4MEozEeitMaYzHKsj-w"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_wtOQwEo0EeitMaYzHKsj-w" name="&lt;&lt;depends on>>" client="_79jyAEozEeitMaYzHKsj-w" supplier="_nxIKYEoyEeitMaYzHKsj-w"/>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_QoOYUEo2EeitMaYzHKsj-w" name="&lt;&lt;realize>>" client="_79jyAEozEeitMaYzHKsj-w" supplier="_txGocEo1EeitMaYzHKsj-w"/>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_HSb4MEo3EeitMaYzHKsj-w" name="&lt;&lt;realize>>" client="_79jyAEozEeitMaYzHKsj-w" supplier="_3x_pIEo2EeitMaYzHKsj-w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_eiHnsEozEeitMaYzHKsj-w" client="_LKdToEosEeitMaYzHKsj-w" supplier="_OV0YMEozEeitMaYzHKsj-w"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_jWzesEozEeitMaYzHKsj-w" client="_4mFZgEorEeitMaYzHKsj-w" supplier="_nxIKYEoyEeitMaYzHKsj-w"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_DxUCMEo0EeitMaYzHKsj-w" client="_FihawEosEeitMaYzHKsj-w" supplier="_79jyAEozEeitMaYzHKsj-w"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_hbKb8Eo0EeitMaYzHKsj-w" name="Public Authority">
+    <generalization xmi:type="uml:Generalization" xmi:id="_jjmIEEo0EeitMaYzHKsj-w" general="_FihawEosEeitMaYzHKsj-w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_HikQ0Eo1EeitMaYzHKsj-w" name="Other Citizens interested in Radon">
+    <generalization xmi:type="uml:Generalization" xmi:id="_Pch2sEo1EeitMaYzHKsj-w" general="_FihawEosEeitMaYzHKsj-w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_LXKuYEo2EeitMaYzHKsj-w" client="_hbKb8Eo0EeitMaYzHKsj-w" supplier="_txGocEo1EeitMaYzHKsj-w"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_CzBtoEo3EeitMaYzHKsj-w" client="_hbKb8Eo0EeitMaYzHKsj-w" supplier="_3x_pIEo2EeitMaYzHKsj-w"/>
+</uml:Model>
